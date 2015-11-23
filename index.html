@@ -1,0 +1,57 @@
+<DOCTYPE !html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Menu principal de l'application</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#auth_content").load("auth.html #ID_form").hide();
+				$("#consult_content").load("consult_films.html #consult_form").hide();
+				$("#auth").click((function(){
+					$('#content_container div').hide();
+				 	$("#auth_content").toggle();
+			    }));
+			    $("#consult").click((function(){
+			    	$('#content_container div').hide();
+				 	$("#consult_content").toggle();
+			    }));
+
+			    //validate that at least one field is filled at film consultation
+			    //filter function checks all the elements returned by the selector
+			    //and creates a new object or array filled with the elemnts that
+			    //did not return 0 or null
+			    $('#submit_but').click(function() {
+			    	if($('#consult_form input[type="text"]').filter(function (el) {
+				    	return $(el).val() != '';}).length > 0) 
+					{
+						$('#consult_form').submit();
+					}
+					else 
+					{
+						alert('Veuillez remplir au moins un champ de recherche.');
+					}
+			    });
+			});
+		</script>
+		
+	</head>
+	
+	<body>
+		<ul>		
+			<a href="javascript:void(0)"><li id="auth">Login</li></a>
+			<a href="javascript:void(0)"><li id="consult">Consulter les films</li></a>
+			<a href="location.html"><li>Louer un film</li></a>
+			<a href="add_film.html"><li>Ajouter un film</li></a>
+			<a href="delete_film.html"><li>Supprimer un film</li></a>
+		</ul>
+
+		<div id="content_container">
+			<div id="auth_content"></div>
+			<div id="consult_content"></div>
+		</div>
+	</body>
+</html>

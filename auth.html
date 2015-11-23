@@ -1,0 +1,29 @@
+<DOCTYPE !html>
+<html>
+	<head>
+		<title>Presentation TP3 BD</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+
+	<form id="ID_form" method="post" action="./Servlet">
+	<table id="auth_inputs_table">
+		<tr>
+			<td><label for="username"> Username: </label></td>
+			<td><input type="text" name="username" required><br /></td>
+		</tr>
+		<tr>
+			<td><label for="mdp"> Mot de passe: </label></td>
+			<td><input id="pw" type="password" name="mdp" required></td>
+		</tr>
+	</table>
+	<p id="buttons_container">
+		<input id="submit_but" type="submit" value="Soumettre">
+		<input id="reset_but" type="reset" value="Effacer">
+	</p>
+	</form>
+
+	</body>
+</html>

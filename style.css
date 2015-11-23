@@ -1,0 +1,76 @@
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #3B3B3B;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+table tr > td {
+	padding-bottom: 0.2em;
+}
+ul {
+	list-style-type: none;
+	width: 38em;
+	margin: 0 auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+ul li {
+	display: inline;
+	margin-right: 1em;
+}
+#content {
+	height: 37.5em;
+	width: 100%;
+}
+#ID_form {
+	background: #C4C4C4;
+	padding: 1em;
+	width: 18em;
+	margin: 0 auto;
+}
+input[type="submit"], 
+input[type="reset"], 
+input[type="button"] {
+	padding: 0.4em;
+	width: 8em;
+	font-size: 1em;
+	margin: 0.4em;
+}
+input[type="text"], #pw {
+	padding: 0.2em;
+}
+#submit_but {
+	background-color: #0CAF83;
+	color: white;
+}
+#auth_inputs_table {
+	margin-bottom: 1em;
+}
+
+
+/*CONSULT_FILMS STYLE*/
+
+#consult_form input[type="text"] {
+	margin: 0.5em;
+}
+#consult_table label {
+	color: white;
+}
+#consult_table tr > td {
+	text-align: right;
+}
+#consult_table {
+	margin: 0 auto;
+}
+#consult_table #submit_but,
+#consult_table #reset_but {
+	padding: 0;
+	width: 7.5em;
+}
